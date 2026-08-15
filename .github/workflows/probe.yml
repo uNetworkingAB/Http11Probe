@@ -28,7 +28,7 @@ jobs:
       id: discover
       run: |
         SERVERS='[]'
-        for f in src/Servers/U*/probe.json; do
+        for f in src/Servers/UWeb*/probe.json; do
           dir=$(basename "$(dirname "$f")")
           name=$(jq -r .name "$f")
           lang=$(jq -r '.language // ""' "$f")
